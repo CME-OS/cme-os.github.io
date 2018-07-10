@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="generator" content="Hugo 0.43" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Dev Guide </title>
+
+  
+  <meta name="description" content="Here you will find all technical information you need to work on CME."> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="cme">
+
+
+  <meta property="og:title" content="Dev Guide" />
+<meta property="og:description" content="Here you will find all technical information you need to work on CME." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/dev-guide/" />
+
+
+
+<meta property="article:published_time" content="2018-07-10T20:09:59&#43;01:00"/>
+
+<meta property="article:modified_time" content="2018-07-10T20:09:59&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/docs/dev-guide/">  
+
+  
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Campaigns Made Easy</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Campaigns Made Easy</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/docs/" >Docs</a></li>
+    
+    <li><a href="http://demo.campaignsmadeeasy.com" >Demo</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> Dev Guide </h1>
+      <p class="hero-lead">
+           Welcome to CME developer's guide, here you will find all technical information you need to work on CME.
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    
+
+<h3 id="projects">Projects</h3>
+
+<p>CME is made up of a number sub-systems that come together to provide users with its full capability and as a developer you can choose to contribute to any of these systems discussed below:</p>
+
+<h4 id="cme-website">CME Website</h4>
+
+<p>This is the website of CME that provides information about the CME the product. It is where this documentation is hosted. Here you can contribute as an author, designer. Most of the website is hosted on github and powered by Jekyll.</p>
+
+<p><a href="https://github.com/CME-OS/cme-os.github.io">View on GitHub</a></p>
+
+<h4 id="cme-web-app">CME Web App</h4>
+
+<p>The web app is the main system - built with laravel v4.2. It serves as the backend for creating and managing campaigns. Check out the demo to have an idea of what it is.</p>
+
+<p><a href="https://github.com/CME-OS/cme">View on GitHub</a></p>
+
+<h4 id="cme-api">CME API</h4>
+
+<p>With third party integration in mind, CME also has an API which allows others to communicate with any CME instance and perform common tasks on it. The API is built with the Slim framework</p>
+
+<p>More technical information can be found here</p>
+
+<p><a href="https://github.com/CME-OS/cme-api">View on GitHub</a></p>
+
+<h4 id="cme-kernel">CME Kernel</h4>
+
+<p>This is the heart of the project. It provides all the core functionality of CME and encapsulates all the juicy business logic.</p>
+
+<p><a href="https://github.com/CME-OS/cme-kernel">View on GitHub</a></p>
+
+<h4 id="cme-data">CME Data</h4>
+
+<p>This is a repository of all of CME data types. To enforce certain data structure across the project, we use this set of objects</p>
+
+<p><a href="https://github.com/CME-OS/cme-data">View on GitHub</a></p>
+
+<h4 id="cme-sdk">CME SDK</h4>
+
+<p>The SDK is currently only available in PHP but we welcome more development in other languages. The SDK allows for third party integration. Basically it’s a wrapper around the API that exposes a set of methods that make it easier to work with the API.</p>
+
+<p><a href="https://github.com/CME-OS/cme-sdk">View on GitHub</a></p>
+
+<h4 id="commander">Commander</h4>
+
+<p>Commander is a simple tool designed to be light so that it is quick and easy to deploy. It’s main purpose is to send emails from the message queue. It’s commonly deployed to an EC2 instance and run from there to take full advantage of AWS free tier.</p>
+
+<p>NOTE: Commander requires access to your CME database.</p>
+
+<p><a href="https://github.com/CME-OS/cme-commander">View on GitHub</a></p>
+
+
+    
+    </div>
+    </div>
+</main>
+  <footer></footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

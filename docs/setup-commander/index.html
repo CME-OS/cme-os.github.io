@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta name="generator" content="Hugo 0.43" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Setup Commander </title>
+
+  
+  <meta name="description" content="Popular and adjustable menu and navigation option"> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="cme">
+
+
+  <meta property="og:title" content="Setup Commander" />
+<meta property="og:description" content="Popular and adjustable menu and navigation option" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/setup-commander/" />
+
+
+
+<meta property="article:published_time" content="2017-04-10T16:42:12&#43;01:00"/>
+
+<meta property="article:modified_time" content="2017-04-10T16:42:12&#43;01:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="/docs/setup-commander/">  
+
+  
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+
+ <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Campaigns Made Easy</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Campaigns Made Easy</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/docs/" >Docs</a></li>
+    
+    <li><a href="http://demo.campaignsmadeeasy.com" >Demo</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> Setup Commander </h1>
+      <p class="hero-lead">
+           Installing Commander.
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    
+
+<h3 id="how-to-install-commander">How to install Commander</h3>
+
+<p>Commander is a simple tool designed to be light so that it is quick and easy to deploy. It’s main purpose is to send emails from the message queue. It’s commonly deployed to an EC2 instance and run from there to take full advantage of AWS free tier.</p>
+
+<h4 id="installing-commander-on-ec2">Installing Commander on EC2</h4>
+
+<p>CME provides a nice CLI tool that installs a copy of commander on EC2. For this to work you need to have AWS setup. Edit your CME .env file and add your AWS details then run the following command from a terminal and follow on screen instructions</p>
+
+<pre><code class="language-sh">php artisan cme:install-commander -i1
+</code></pre>
+
+<h4 id="installing-commander-on-your-server">Installing Commander on your server</h4>
+
+<p>You will want to do this if you are using Amazon as an smtp provider and sending emails through SES. To avoid charges and take advantage of the <strong>60K free emails</strong> per month that amazon offers on its free tier.</p>
+
+<p>Commander comes with a install script (install.sh), which installs all the dependencies. At this point this script only works on debian systems</p>
+
+<p><strong>Debian</strong></p>
+
+<ul>
+<li>Download and extract commander from here</li>
+<li>Run install.sh to setup commander</li>
+</ul>
+
+<p><strong>Non-Debian</strong></p>
+
+<ul>
+<li>Download and extract commander from here</li>
+<li>Install dependencies
+
+<ul>
+<li>Monit</li>
+<li>Curl</li>
+<li>PHP Curl</li>
+<li>PHP Cli</li>
+<li>PHP MySQL</li>
+<li>Composer</li>
+</ul></li>
+<li>Run composer install</li>
+<li>Setup monit - Use template provided within Commander (monit-template)</li>
+</ul>
+
+
+    
+    </div>
+    </div>
+</main>
+  <footer></footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>
